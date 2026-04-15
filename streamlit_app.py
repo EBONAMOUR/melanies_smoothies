@@ -37,9 +37,10 @@ if ingredient_list:
     #st.write(my_insert_stmt)
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
+      st.success(f"Your Smoothie is ordered, {name_on_order}!", icon="✅")
 
 import requests  
 smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
 st.text(smoothiefroot_response)
         
-st.success(f"Your Smoothie is ordered, {name_on_order}!", icon="✅")
+
